@@ -33,7 +33,7 @@ FROM[Sales].[SalesOrderDetail]
 SELECT COUNT (DISTINCT PersonType) AS NewPersontype
 FROM Person.Person
 WHERE LastName LIKE 'M%'
-OR EmailPromotion!=1
+OR EmailPromotion  NOT LIKE '%1%'
 
 -- task 4  b
 SELECT TOP 3 SpecialOfferID
@@ -58,4 +58,7 @@ SELECT ProductSubcategoryID, MIN (Weight) AS MinWeight, MAX(Size) AS MaxSize
 FROM Production.Product
 WHERE Color IS NOT NULL
 GROUP BY ProductSubcategoryID
+
+
+
 
