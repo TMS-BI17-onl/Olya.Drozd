@@ -57,5 +57,5 @@ FROM Production.Product
 SELECT ProductSubcategoryID, MIN (Weight) AS MinWeight, MAX(Size) AS MaxSize
 FROM Production.Product
 WHERE Color IS NOT NULL
-GROUP BY ProductSubcategoryID,Color
+GROUP BY ProductSubcategoryID
 
