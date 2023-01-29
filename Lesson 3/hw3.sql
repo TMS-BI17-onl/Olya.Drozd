@@ -13,7 +13,7 @@ SELECT  p1. BusinessEntityID, p2. ProductID, p1.Name,p2.StandardPrice
 FROM  Purchasing.Vendor p1
        JOIN Purchasing.ProductVendor p2
 	  ON p1.[BusinessEntityID]=p2.[BusinessEntityID]
-WHERE p2. StandardPrice >10 AND  p1.Name LIKE 'N%' OR p1. Name LIKE '%x%'
+WHERE p2. StandardPrice >10 AND  (p1.Name LIKE 'N%' OR p1. Name LIKE '%x%')
 	
 
 
