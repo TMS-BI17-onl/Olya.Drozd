@@ -1,13 +1,16 @@
 
 
  CREATE PROCEDURE updtable
+ @BusinessEntityID INT,
+ @NationalIDNumber INT
  AS
- DECLARE @NationalIDNumber INT= 879341111, @BusinessEntityID INT=15
  UPDATE HumanResources.Employee 
  SET
  NationalIDNumber=@NationalIDNumber 
  WHERE  BusinessEntityID=@BusinessEntityID
 
 
-EXECUTE updtable
+EXECUTE dbo.updtable
+ @BusinessEntityID=15,
+ @NationalIDNumber=879341111;
 
