@@ -44,3 +44,4 @@ WHERE  StandardCost=maxcost AND COLOR IS NOT NULL
   FROM [Production].[Product] p1
   WHERE [StandardCost] =(SELECT DISTINCT MAX([StandardCost]) FROM [Production].[Product] p WHERE p.Color = p1.Color GROUP BY Color)
  
+ Mark: 9
