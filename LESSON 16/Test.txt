@@ -31,7 +31,7 @@ SELECT Name, Registration_Number
 FROM DimCustomers 
 EXCEPT
 SELECT Name, Registration_Number
-FROM FctOrders f JOIN DimCustomers c ON c.ID_Customer = f. ID_Customer
+FROM FctOrders f LEFT JOIN DimCustomers c ON c.ID_Customer = f. ID_Customer
 WHERE RentDate > DATEADD(YEAR, -1, GETDATE())
 
 --4 
