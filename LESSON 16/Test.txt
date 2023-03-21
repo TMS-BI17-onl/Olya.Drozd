@@ -47,3 +47,5 @@ FROM Notifications n JOIN Users u ON   n.user_id=u.user_id
 WHERE u. email='alex@gmail.com' and n.is read IS False
 GROUP BY n.Category
 HAVING COUNT (1)>50
+
+Mark: 10
